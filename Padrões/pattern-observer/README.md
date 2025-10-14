@@ -1,21 +1,49 @@
-# 💡 Padrão Observer
+💡 Padrão Observer - Sistema de Blog
+✅ O que é
+O Observer permite que múltiplos objetos (observadores) sejam notificados automaticamente quando outro objeto (sujeito) muda seu estado.
+✅ Problema resolvido
 
-## ✅ O que é
-O **Observer** permite que múltiplos objetos (observadores) sejam notificados automaticamente quando outro objeto (sujeito) muda seu estado.
+Desacopla o sujeito dos observadores
+Fácil adicionar/remover observadores dinâmicamente
+Mais flexível e reutilizável
+Implementação de um-para-muitos eficiente
+Reduz acoplamento entre componentes
 
-## ❌ Problema resolvido
-- Desacopla o sujeito dos observadores.
-- Fácil adicionar/remover observadores.
-- Mais flexível e reutilizável.
+💡 Exemplo
+Um blog que mantém uma lista de seguidores e os notifica automaticamente quando um novo artigo é publicado.
+📂 Estrutura UML
+                ┌──────────────────┐
+                │  <<interface>>   │
+                │    Sujeito       │
+                │──────────────────│
+                │+ inscrever()     │
+                │+ desinscrever()  │
+                │+ notificar()     │
+                └────────┬─────────┘
+                         △
+                         │ implements
+                         │
+                    ┌────────┐
+                    │  Blog  │
+                    └────────┘
 
-## 💡 Exemplo
-Uma loja que mantém uma lista de clientes e os notifica automaticamente quando há uma promoção.
+        ┌──────────────────┐
+        │ <<interface>>    │
+        │   Observador     │
+        │──────────────────│
+        │+ atualizar()     │
+        └────────┬─────────┘
+                 △
+                 │ implements
+                 │
+            ┌─────────┐
+            │Seguidor │
+            └─────────┘
+📋 Estrutura do Projeto
 
-## 📂 UML
-- Interface `Observer` (com método `update`)
-- Interface `Subject` (com métodos `add`, `remove`, `notify`)
-- Classe `Loja` (implementa `Subject`)
-- Classe `Cliente` (implementa `Observer`)
-
-## 🌍 Aplicação real
-Sistemas de notificação (ex.: YouTube notificando inscritos quando sai vídeo novo).
+Sujeito.java - Interface para o publicador
+Observador.java - Interface para os observadores
+Blog.java - Classe concreta que implementa Sujeito
+Seguidor.java - Classe concreta que implementa Observador
+Main.java - Demonstra o padrão em uso
+README.md - Esta documentação

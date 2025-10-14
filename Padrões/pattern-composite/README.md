@@ -1,20 +1,40 @@
-# 💡 Padrão Composite
+💡 Padrão Composite - Sistema de Cardápio
+✅ O que é
+O Composite cria uma interface comum para objetos simples e compostos, permitindo tratá-los da mesma forma.
+✅ Problema resolvido
 
-## ✅ O que é
-O **Composite** cria uma interface comum para objetos simples e compostos, permitindo tratá-los da mesma forma.
+Cliente não precisa diferenciar Prato e Categoria.
+Permite estruturas hierárquicas e recursivas.
+Código mais limpo e reutilizável.
+Possibilita trabalhar com coleções heterogêneas de objetos.
 
-## ❌ Problema resolvido
-- Cliente não precisa diferenciar `Arquivo` e `Pasta`.
-- Permite estruturas hierárquicas.
-- Código mais limpo e reutilizável.
+💡 Exemplo
+Sistema de cardápio onde Prato e Categoria implementam a mesma interface Componente, permitindo que categorias contenham outras categorias ou pratos individuais.
+📂 Estrutura UML
+           ┌─────────────────────────┐
+           │   <<interface>>         │
+           │    Componente           │
+           │─────────────────────────│
+           │  + exibir(): void       │
+           └──────────┬──────────────┘
+                      ▲
+                      │
+         ┌────────────┴────────────┐
+         │                         │
+    ┌────────────┐          ┌──────────────┐
+    │   Prato    │          │  Categoria   │
+    ├────────────┤          ├──────────────┤
+    │ - nome     │          │ - nome       │
+    │ - preco    │          │ - componentes│
+    ├────────────┤          ├──────────────┤
+    │+ exibir()  │          │+ adicionar() │
+    └────────────┘          │+ remover()   │
+                            │+ exibir()    │
+                            └──────────────┘
+📋 Estrutura do Projeto
 
-## 💡 Exemplo
-Sistema de arquivos onde `Arquivo` e `Pasta` implementam a mesma interface `Componente`.
-
-## 📂 UML
-- Interface `Componente`
-- Classe `Arquivo` (implementa `Componente`)
-- Classe `Pasta` (implementa `Componente`, pode conter outros `Componente`)
-
-## 🌍 Aplicação real
-Sistemas de menu (menu pode conter item simples ou submenu).
+Componente.java - Interface comum
+Prato.java - Classe para objetos simples (folhas)
+Categoria.java - Classe para objetos compostos (nós)
+Main.java - Demonstra o padrão em uso
+README.md - Esta documentação

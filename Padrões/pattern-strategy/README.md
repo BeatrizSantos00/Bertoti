@@ -1,18 +1,47 @@
-# 💡 Padrão Strategy
+💡 Padrão Strategy - Sistema de Pagamento
+✅ O que é
+O Strategy separa comportamentos em interfaces e implementações específicas, permitindo que sejam trocados em tempo de execução.
+✅ Problema resolvido
 
-## ✅ O que é
-O **Strategy** separa comportamentos em **interfaces** e **implementações específicas**, permitindo que sejam trocados em tempo de execução.
+Evita código duplicado (sem if-else)
+Facilita a manutenção
+Permite adicionar novos comportamentos sem alterar o código existente
+Flexibilidade para trocar estratégias dinamicamente
+Respeita o princípio Open/Closed
 
-## ❌ Problema resolvido
-- Evita código duplicado.
-- Facilita a manutenção.
-- Permite adicionar novos comportamentos sem alterar o código existente.
+💡 Exemplo
+Um carrinho de compras que pode processar pagamentos de diferentes formas (Cartão, PIX, Boleto), e pode mudar em tempo de execução.
+📂 Estrutura UML
+           ┌──────────────────────┐
+           │ <<interface>>        │
+           │ MetodoPagamento      │
+           │──────────────────────│
+           │ + pagar(valor): void │
+           └──────────┬───────────┘
+                      △
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+   ┌─────────┐  ┌──────────┐  ┌──────────┐
+   │Cartão   │  │   PIX    │  │ Boleto   │
+   └─────────┘  └──────────┘  └──────────┘
 
-## 💡 Exemplo
-Cada `Personagem` pode ter uma `EstrategiaDeAtaque` diferente (espada, arco, magia), e pode mudar em tempo de execução.
+┌─────────────────────┐
+│ CarrinhoCompras     │
+├─────────────────────┤
+│ - cliente           │
+│ - total             │
+│ - metodo: Strategy  │ ────→ Usa a Strategy!
+├─────────────────────┤
+│ + setMetodo()       │
+│ + finalizarCompra() │
+└─────────────────────┘
+📋 Estrutura do Projeto
 
-## 📂 UML
-(Interface `Ataque` → implementações `AtaqueEspada`, `AtaqueArco`; classe `Personagem` usa uma referência a `Ataque`)
-
-## 🌍 Aplicação real
-Sistemas de pagamento: você pode trocar a estratégia de pagamento (`Cartão`, `PIX`, `Boleto`) sem mudar a lógica principal.
+MetodoPagamento.java - Interface para estratégias
+PagamentoCartao.java - Implementação para cartão
+PagamentoPix.java - Implementação para PIX
+PagamentoBoleto.java - Implementação para boleto
+CarrinhoCompras.java - Classe que usa as estratégias
+Main.java - Demonstra o padrão em uso
+README.md - Esta documentação

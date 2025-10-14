@@ -1,24 +1,40 @@
 // pattern-strategy/Main.java
 public class Main {
     public static void main(String[] args) {
-        // criar estratégias
-        Atacar forte = new AtaqueForte();
-        Atacar rapido = new AtaqueRapido();
-        Atacar magia = new AtaqueMagia();
+        System.out.println("=== SISTEMA DE PAGAMENTO COM STRATEGIES ===\n");
 
-        // criar personagens com estratégias iniciais
-        Personagem tank = new Personagem("Brom", forte);
-        Personagem assassino = new Personagem("Lyra", rapido);
-        Personagem mago = new Personagem("Eldin", magia);
+        // Criar estratégias de pagamento
+        MetodoPagamento cartao = new PagamentoCartao();
+        MetodoPagamento pix = new PagamentoPix();
+        MetodoPagamento boleto = new PagamentoBoleto();
 
-        // executar ataques
-        tank.atacar();
-        assassino.atacar();
-        mago.atacar();
+        // Cliente 1: Pagando com cartão
+        CarrinhoCompras compra1 = new CarrinhoCompras("Ana Silva", 150.00);
+        compra1.setMetodoPagamento(cartao);
+        compra1.finalizarCompra();
 
-        // trocar estratégia em tempo de execução
-        System.out.println("\nLyra encontra uma espada pesada e muda de estratégia:");
-        assassino.setEstrategiaAtaque(forte);
-        assassino.atacar();
+        // Cliente 2: Pagando com PIX
+        CarrinhoCompras compra2 = new CarrinhoCompras("Bruno Santos", 250.50);
+        compra2.setMetodoPagamento(pix);
+        compra2.finalizarCompra();
+
+        // Cliente 3: Pagando com Boleto
+        CarrinhoCompras compra3 = new CarrinhoCompras("Carlos Oliveira", 500.00);
+        compra3.setMetodoPagamento(boleto);
+        compra3.finalizarCompra();
+
+        // Cliente 4: Mudando de estratégia em tempo de execução
+        System.out.println("--- MUDANDO ESTRATÉGIA EM TEMPO DE EXECUÇÃO ---");
+        CarrinhoCompras compra4 = new CarrinhoCompras("Diana Costa", 80.00);
+        compra4.setMetodoPagamento(pix);
+        System.out.println("Diana escolheu PIX inicialmente:");
+        compra4.finalizarCompra();
+
+        System.out.println("Diana mudou de ideia e quer pagar com cartão:");
+        compra4.setMetodoPagamento(cartao);
+        compra4.finalizarCompra();
+
+        System.out.println("✅ PADRÃO STRATEGY: Estratégias separadas e trocáveis em tempo real!");
+        System.out.println("Sem código duplicado, sem if-else, fácil de estender!");
     }
 }

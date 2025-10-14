@@ -1,17 +1,51 @@
-# 🔗 Strategy + Observer + Composite
+🔗 Strategy + Observer + Composite
+✅ O que é
+Exemplo que junta os três padrões em um único cenário: uma empresa com departamentos, funcionários e tarefas.
+💡 Exemplo
 
-## ✅ O que é
-Exemplo que junta os três padrões em um único cenário.
+Funcionários (Composite + Sujeito) podem ser agrupados em Departamentos.
+Cada funcionário tem uma tarefa configurável (Strategy) que pode ser trocada em tempo de execução.
+Todos os funcionários e departamentos podem ser notificados quando mudanças ocorrem (Observer).
 
-## 💡 Exemplo
-- Personagens (`Composite`) podem conter itens ou outros personagens aliados.  
-- Cada personagem tem um tipo de ataque configurável (`Strategy`).  
-- Todos os personagens podem ser notificados quando o estado da batalha muda (`Observer`).  
+📂 Estrutura UML Combinada
+                    ┌──────────────┐
+                    │   Tarefa     │ (Strategy)
+                    │ (interface)  │
+                    └──────────────┘
+                           ▲
+                ┌──────────┴──────────┐
+                │                     │
+          ┌──────────────┐    ┌──────────────┐
+          │Programação   │    │  Design      │
+          └──────────────┘    └──────────────┘
 
+        ┌──────────────────┐    ┌──────────────────┐
+        │  Sujeito         │    │  Observador      │
+        │  (interface)     │    │  (interface)     │
+        └──────┬───────────┘    └─────────┬────────┘
+               │                          │
+        ┌──────┴───────────┐        ┌─────┴────────┐
+        │ Funcionario      │        │ Funcionario  │
+        │ (Sujeito+        │        │ (Observador) │
+        │  Observador)     │        │              │
+        └──────┬───────────┘        └──────────────┘
+               │                           ▲
+               │                           │
+               └───────────────┬───────────┘
+                         ┌─────┴──────┐
+                         │Departamento│
+                         │(Composite+ │
+                         │ Observador)│
+                         └────────────┘
+📋 Estrutura do Projeto
 
-## 🌍 Aplicação real
-Um jogo RPG, onde:
-- Jogadores podem trocar estratégia de ataque (Strategy).
-- Recebem notificações de eventos da batalha (Observer).
-- São organizados em grupos ou times (Composite).
+Tarefa.java - Interface para Strategy
+TarefaProgramacao.java - Implementação concreta
+TarefaDesign.java - Implementação concreta
+Observador.java - Interface para Observer
+Sujeito.java - Interface para Observer (Subject)
+Funcionario.java - Usa Strategy, implementa Observer e Sujeito
+Departamento.java - Composite que implementa Observer
+Main.java - Demonstra os 3 padrões funcionando juntos
+README.md - Esta documentação
 

@@ -1,18 +1,34 @@
-# ❌ Antipattern Strategy
+❌ Antipattern Strategy - Sistema de Veículos
+✅ O que é
+É quando a lógica de comportamento (ex.: tipo de motor de um veículo) fica fixa dentro da classe, sem flexibilidade para mudar ou reaproveitar.
+❌ Problema
 
-## ✅ O que é
-É quando a lógica de comportamento (ex.: ataque de um personagem) fica **fixa dentro da classe**, sem flexibilidade para mudar ou reaproveitar.
+Código duplicado em vários if-else statements.
+Dificuldade de manutenção: mudar o comportamento de um motor exige editar a classe.
+Pouca reutilização de código.
+Impossível mudar o tipo de motor em tempo de execução.
+Violação do princípio Open/Closed: classe fica aberta para modificação.
 
-## ❌ Problema
-- Código duplicado em várias classes.
-- Dificuldade de manutenção: mudar o ataque de um personagem exige editar a classe.
-- Pouca reutilização de código.
+💡 Exemplo do Antipadrão
+java// ❌ Lógica fixa dentro da classe
+Veiculo v1 = new Veiculo("Ferrari", "Gasolina");
+v1.acelerar();  // Motor a gasolina rugindo com força!
 
-## 💡 Exemplo
-Um jogo onde cada personagem tem seu ataque "hardcoded" dentro da classe, sem poder trocar.
+// Se quiser mudar para elétrico, precisa criar um novo objeto
+// Não há flexibilidade!
+Um jogo onde cada veículo tem seu motor "hardcoded" dentro da classe, sem poder trocar dinamicamente.
+📂 Estrutura UML (Antipadrão)
+┌─────────────────────┐
+│    Veiculo          │
+├─────────────────────┤
+│ - nome: String      │
+│ - tipoMotor: String │
+├─────────────────────┤
+│ + acelerar(): void  │
+│   (if-else fixo)    │
+└─────────────────────┘
+📋 Estrutura do Projeto
 
-## 📂 UML
-(Colocar UML mostrando uma classe `Personagem` com método `atacar()` fixo)
-
-## 🌍 Aplicação real
-Aplicativos onde as regras de negócio ficam todas espalhadas no código, em vez de serem separadas em estratégias reutilizáveis.
+Veiculo.java - Classe com lógica fixa
+Main.java - Demonstra o antipadrão em uso
+README.md - Esta documentação
