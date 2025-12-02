@@ -1,82 +1,139 @@
-# Beatriz Sthefanny Araujo Santos
+## 👋 Olá, eu sou Beatriz Sthefanny Araujo Santos.
+🎓 Estudante de **Banco de Dados** na **FATEC Prof. Jessen Vidal**.
 
-## Introdução
+Atualmente, estou desenvolvendo habilidades tanto em Desenvolvimento Full Stack quanto em Análise de Dados. Gosto de explorar tecnologia com curiosidade e entender como cada parte contribui para soluções completas — desde o design de dados e lógica no backend até a construção de interfaces no frontend e a análise que transforma informação em valor.
 
-Meu nome é Beatriz, tenho 18 anos e sou formada em Técnico em Desenvolvimento de Sistemas pela ETEC (2021–2023). Atualmente, curso o Tecnólogo em Banco de Dados na Fatec de São José dos Campos, 
-com previsão de conclusão para dezembro de 2026.
+---
 
-## Contatos
-* [GIT](https://www.git.com)
-* [LinkedIn](https://www.linkedin.com)
+### 💡 Minhas experiências incluem:
 
-## Meus Principais Conhecimentos
-Apresente seus principais conhecimentos. Foque nos conhecimentos que possui maior domínio e que deseja desenvolver durante sua carreira.
+- **🧩 Desenvolvimento Full Stack**: APIs REST (Backend) e Frontend
+
+- **🗂️ Modelagem e Persistência de Dados** (SQL/NoSQL)
+
+- **📊 Análise de Dados**: Visualização e Interpretação Estratégica
+
+- **🔧 Práticas de Desenvolvimento**: Git, versionamento e métodos ágeis
+
+Sou uma pessoa curiosa, organizada e comunicativa. Acredito que a tecnologia conecta lógica e impacto real. Busco ambientes que valorizem inovação e aprendizado contínuo para desenvolver soluções que sejam robustas, funcionais e bem arquitetadas.
+
+---
+
+## 📬 Contatos
+
+[![GitHub](https://img.shields.io/badge/GitHub-24292E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BeatrizSantos00)/in/tiagobernardosantos/)
+
+---
+
+## 🚀 Tecnologias e Ferramentas
+
+| Categoria | Tecnologias |
+|----------|------------|
+| Backend | ![Java](https://img.shields.io/badge/Java-red?style=for-the-badge&logo=openjdk&logoColor=white) ![SpringBoot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white) |
+| Banco de Dados | ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) |
+| Frontend | ![Vue](https://img.shields.io/badge/Vue.js-42B883?style=for-the-badge&logo=vuedotjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) |
+| Integração | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white) |
+| Dev Workflow | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white) |
+| Metodologia | ![Scrum](https://img.shields.io/badge/Scrum-6C63FF?style=for-the-badge) ![Kanban](https://img.shields.io/badge/Kanban-007ACC?style=for-the-badge) |
+
+---
+
+## 📁 Projeto Desenvolvido — API **2025/1**
+
+🛠️ Sistema para **controle de ponto e gestão de funcionários**, com múltiplos perfis de acesso e funcionalidades como:
+
+- Cadastro e gestão de empresas  
+- Registro e consulta de pontos  
+- Painel visual com métricas  
+
+Tecnologias aplicadas:  
+**Java + Spring Boot | Vue.js | MySQL | API REST | Arquitetura em camadas**
+
+🔗 Repositório:  
+👉 https://github.com/DenariusData/API-3SEM
+
+---
+
+## 🧱 Minhas Contribuições
+
+Durante o desenvolvimento do projeto, tive participação ativa tanto na parte técnica quanto na organização da estrutura do repositório e documentação. Minhas principais contribuições incluem:
+
+---
+
+### 📄 Padronização dos READMEs
+- Criei e padronizei os arquivos README do **Main**, **Backend**, **Frontend** e da **Documentação**.
+- Estruturei o conteúdo para melhorar a navegação, entendimento e experiência de onboarding.
+- Apliquei boas práticas como:
+  - Organização por seções
+  - Linguagem clara e objetiva
+  - Links diretos entre módulos do projeto  
+Isso facilitou o alinhamento entre membros do time e tornou a comunicação técnica mais eficiente.
+
+---
+
+### ⚙️ Implementação Backend — Coleta de Dados dos Funcionários
+- Desenvolvi a funcionalidade responsável por **buscar, consolidar e retornar dados dos funcionários** para o frontend.
+- Implementei:
+  - **DTOs para padronização de respostas**
+  - **Validações**
+  - **Boas práticas REST**
+- Garantei que o fluxo entre **banco → API → frontend** fosse consistente, seguro e de fácil manutenção.
+
+---
+
+### 🖥️ Melhorias no Frontend
+- Realizei ajustes de interface e funcionalidade para melhorar:
+  - A comunicação com a API
+  - Consistência visual
+  - Fluxos de navegação
+- Corrigi pequenos pontos de layout e interação, garantindo uma experiência mais fluida e integrada entre as telas.
+
+---
+
+### 🔍 Testes e Validação
+- Participei da validação final do sistema, comparando:
+  - Dados cadastrados x retornos da API
+  - Fluxos esperados x comportamento real
+  - Interface x persistência no banco
+- Ajudei a identificar inconsistências entre camadas e sugeri correções alinhadas às boas práticas.
+
+---
+
+### 🤝 Decisões Técnicas e Alinhamentos
+- Colaborei em discussões sobre:
+  - Organização do repositório
+  - Padronização de commits e branches
+  - Estrutura do backend e frontend
+  - Fluxo API → Banco → Frontend
+- Auxiliei a garantir que o projeto permanecesse **coeso, documentado e escalável**.
 
 
-## Meus Projetos
+---
 
-### Em 2021-2
-Fale sobre o projeto desenvolvido. Apresente a empresa parceira, o problema e a solução entregue pela equipe (mínimo de um parágrafo por item). Recomenda-se o uso de figuras (ou até mesmo vídeos) para ilustrar os principais projetos.
+## 💻 Hard Skills
 
-[GIT](https://www.git.com)
+| Habilidade | Aplicação |
+|-----------|-----------|
+| Spring Boot | Controllers, Services, DTOs, validações e boas práticas |
+| SQL (MySQL/PostgreSQL) | Modelagem, consultas, relacionamentos e normalização |
+| Vue.js + TypeScript | Desenvolvimento de telas dinâmicas integradas à API |
+| Git/GitHub | Branching, commits semânticos e revisão de código |
+| Arquitetura | Integração entre camadas e organização escalável |
 
-#### Tecnologias Utilizadas
-Linguagens: Java, JavaScript, TypeScript, Python
+---
 
-Frameworks e bibliotecas: Spring Boot (Java), Express.js (Node.js), Vue.js (frontend de integração)
+## 🤝 Soft Skills
 
-Banco de dados: MySQL, PostgreSQL, SQL Server, MongoDB
+| Competência | Aplicação |
+|------------|-----------|
+| Trabalho em Equipe | Desenvolvimento colaborativo com versionamento |
+| Comunicação | Alinhamento técnico e documentação clara |
+| Organização | Uso de Scrum/Kanban e priorização de tarefas |
+| Resolução de Problemas | Debug, análise e propostas eficientes |
+| Aprendizado Contínuo | Estudos constantes e adaptação de práticas |
 
-APIs REST: criação de endpoints para CRUD e integração com clientes externos
+---
 
-Ferramentas: Postman (testes de API), Git/GitHub (versionamento), Docker (em alguns projetos acadêmicos)
+📌 *Este repositório continuará sendo atualizado conforme minha evolução.*
 
-#### Contribuições Pessoais
-Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.
-
-#### 🔹  Hard Skills
-
-
-Análise de dados: extração, tratamento e construção de dashboards no Power BI.
-
-Desenvolvimento: criação de APIs e sistemas acadêmicos com clientes externos.
-
-Linguagens e Tecnologias: Java, JavaScript, TypeScript, Python, SQL, Vue.js, Node.js.
-
-Bancos de dados: relacionais (MySQL, PostgreSQL, SQL Server) e não relacionais (MongoDB).
-
-#### Soft Skills
-🔹 Soft Skills
-
-Comunicação clara e objetiva
-
-Trabalho em equipe e colaboração
-
-Liderança e iniciativa
-
-Organização e gestão de tempo
-
-Capacidade analítica e resolução de problemas
-
-Adaptabilidade a novos desafios
-
-Proatividade no aprendizado e melhoria contínua
-
-### Em 2022-1
-Mesmo formato
-
-### Em 2022-2
-Mesmo formato
-
-### Em 2023-1
-Mesmo formato
-
-### Em 2023-2
-Mesmo formato
-
-
-
-
-
-
-
+✨ Obrigado por visitar! 😄
