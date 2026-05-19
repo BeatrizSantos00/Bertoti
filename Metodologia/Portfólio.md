@@ -17,11 +17,6 @@ Atualmente, estou desenvolvendo habilidades tanto em Desenvolvimento Full Stack 
 
 Sou uma pessoa curiosa, organizada e comunicativa. Acredito que a tecnologia conecta lógica e impacto real. Busco ambientes que valorizem inovação e aprendizado contínuo para desenvolver soluções que sejam robustas, funcionais e bem arquitetadas.
 
----
-
-## 📬 Contatos
-
-[![GitHub](https://img.shields.io/badge/GitHub-24292E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/BeatrizSantos00)/in/tiagobernardosantos/)
 
 ---
 
